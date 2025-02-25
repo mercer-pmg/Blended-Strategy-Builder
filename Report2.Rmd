@@ -1,0 +1,342 @@
+---
+title: "Aspen Investing Strategy Report"
+date: "2018-11-30"
+references:
+  - id: R-base
+    author:
+    - family: "R Core Team"
+      given: ""
+    title: 'R: A Language and Environment for Statistical Computing'
+    issued:
+      year: 2018
+    URL: https://www.r-project.org
+  - id: R-pagedown
+    author:
+    - family: Xie
+      given: Yihui
+    - family: Lesur
+      given: Romain
+    title: 'Paginate the HTML Output of R Markdown with CSS for Print'
+    issued:
+      year: 2018
+    URL: https://github.com/rstudio/pagedown
+params:
+  allocation: NA
+  total_value: NA
+  fee: NA
+  strategy_match: NA
+  holdings: NA
+  plot: NA
+  return: NA
+  risk: NA
+  yield: NA
+  expense: NA
+output:
+  pagedown::poster_jacobs:
+    self_contained: true
+    pandoc_args: --mathjax
+---
+
+---
+title: `r paste("Aspen Investing |", params$strategy_match)`
+---
+
+```{css, echo=FALSE}
+@page {
+size: 8.5in 11in;
+margin: .25in;
+}
+* {
+box-sizing: border-box;
+}
+html {
+width: 8.5in;
+height: 11in;
+}
+body {
+margin: .25;
+font-size: 12px;
+width: 100%;
+height: 99.9%;
+grid-gap: .1in;
+padding: .1in;
+font-family: 'IBM Plex Sans';
+}
+
+body {
+display: grid;
+grid-template-areas:
+'S1 S1  S1  S1  S1  S1  S1  S1  S1  S1'
+'S2 S2  S2  S2  S2  S2  S2  S2  S2  S2'
+'S3 S3  S3  S3  S3  S3  S3  S3  S3  S3'
+'S4 S4  S4  S4  S4  S4  S4  S4  S4  S4'
+'S5 S5  S5  S5  S5  S5  S5  S5  S5  S5';
+
+grid-template-columns: repeat(8, 1fr);
+grid-template-rows: repeat(5, 1fr);
+}
+
+.section-1 { grid-area: S1; }
+.section-2 { grid-area: S2; }
+.section-3 { grid-area: S3; }
+.section-4 { grid-area: S4; break-inside: avoid-page}
+.section-5 { grid-area: S5; break-inside: avoid-page} 
+.section-6 { grid-area: S6; } 
+.section-7 { grid-area: S7; } 
+.section-8 { grid-area: S8; } 
+.section-9 { grid-area: S9; } 
+
+
+h1, .poster-title, .figure {
+text-align: left;
+}
+
+.poster-title h1 {
+font-family: "Merriweather", Verdana, sans-serif;
+font-size: 2.5em;
+color: #820361;
+padding: 0.05em;
+margin-bottom: 0;
+}
+
+.poster-title {
+border-bottom: none;
+margin: 0;
+}
+
+h1 {
+color: #454759;
+font-family: "Merriweather";
+margin: 0;
+padding: .05em;
+font-size: 2em;
+}
+
+h3 {
+margin: 0;
+padding: 0;
+}
+
+.block {
+border: .1in solid #820361 !important;
+background-color: #FFD8EF !important;
+}
+
+.block h1 {
+background-color: #820361 !important;
+color: white !important;
+font-size: 1.5em
+}
+
+.block > .content {
+padding: .1em;
+line-height: 1em;
+font-size: 3em;
+text-align: center
+}
+
+table {
+margin: auto;
+border-top: 3px solid #C00686;
+border-bottom: 3px solid #C00686;
+width: 100%;
+}
+table thead th { border-bottom: 3px solid #ddd; }
+td { padding: 8px; }
+th { padding: 15px; }
+caption { margin-bottom: 10px; }
+
+a { text-decoration: none; }
+
+h1 hr {
+border: .025in solid gray;
+clip-path: none;
+margin: 0;
+}
+
+.figure-example {
+text-align: center;
+}
+
+.figure-example p:first-child {
+background-color: blue;
+border: 5px dotted gray;
+width: 90%;
+height: 12em;
+padding: .2em 0;
+margin: 0 auto;
+}
+
+.logo-example {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.logo-example > p {
+width: 30%;
+border: 5px dotted sandybrown;
+background-color: whitesmoke;
+height: 5em;
+text-align: center;
+}
+
+```
+
+Summary
+================================================================================
+```{r, echo=FALSE}
+
+x <- params$return |> stringr::str_remove("%") |> as.numeric()
+y <- params$fee |> stringr::str_remove("%") |> as.numeric()
+z <- params$expense |> stringr::str_remove("%") |> as.numeric()
+
+net_return <- (x-y-z) |> scales::percent(scale=1, accuracy = 0.01)
+
+tibble::tibble(
+     x = c("Date", 
+           "Total Investment", 
+           "Advisory Fee",
+           "Weighted Expenses",
+           "Expected Return (Gross)",
+           "Expected Return (Net)",
+           "Expected Risk",
+           "Expected Yield"),
+     y = c(
+          format(Sys.Date(), "%b %d, %Y"), 
+          params$total_value, 
+          params$fee,
+          params$expense,
+          params$return,
+          net_return,
+          params$risk,
+          params$yield)
+) |>
+     
+     gt::gt() |>
+     gt::tab_style(
+          style = list(
+               gt::cell_fill(color = "#454759"),
+               gt::cell_text(color = "#454759")),
+          locations = gt::cells_column_labels()
+     )  |>
+     gt::tab_style(
+          style = list(
+               gt::cell_fill(color = "#F3F4F6")),
+          locations = gt::cells_body(columns = x))  |>
+     gt::tab_style(
+          style = list(
+               gt::cell_text(align = "center")),
+          locations = gt::cells_body(columns = y))  |>
+     # gt::tab_options(column_labels.hidden = TRUE) |>
+     gt::tab_options(
+          table.width = "30%",
+          table.font.size = 10,
+          table.align = "left") 
+
+```
+
+Asset Class Allocation
+================================================================================
+
+```{r, fig.width=8, fig.height=3, fig.align='left', out.height="100%", dev='png', warning=FALSE, echo=FALSE}
+
+p <- params$plot
+
+p <- p +
+     ggplot2::guides(fill = ggplot2::guide_legend(ncol = 2)) +
+     ggplot2::theme(
+          panel.background = ggplot2::element_rect(fill = "white"),
+          panel.grid       = ggplot2::element_blank(),
+          axis.title       = ggplot2::element_blank(),
+          axis.ticks       = ggplot2::element_blank(),
+          axis.text        = ggplot2::element_blank(),
+          legend.text      = ggplot2::element_text(size = 8, family = "IBM Plex Sans"),
+          legend.position  = "left",
+          legend.title     = ggplot2::element_blank())
+
+p
+```
+
+
+Sleeve Allocation
+================================================================================
+
+```{r echo=FALSE, include=TRUE, fig.width=7.5, fig.asp=4/3, fig.align='left', out.width="60%", }
+
+params$allocation |>
+     dplyr::mutate(
+          weight = (weight/100) |> scales::percent(accuracy = 0.1),
+          value = value |> scales::dollar()
+     ) |>
+     dplyr::rename_all(stringr::str_to_title)|>
+     gt::gt(rowname_col = "Sleeve") |>
+     gt::opt_align_table_header(align = "left") |>
+     gt::opt_table_font("IBM Plex Sans") |>
+     # gt::opt_row_striping() |>
+     gt::tab_style(
+          style = gt::cell_fill(color = "#454759"),
+          locations = gt::cells_stubhead()
+     ) |>
+     gt::tab_style(
+          style = list(
+               gt::cell_fill(color = "#454759"),
+               gt::cell_text(color = "white", 
+                             weight = "bold")),
+          locations = gt::cells_column_labels()
+     ) |>
+     gt::tab_style(
+          style = gt::cell_text(align = "center"),
+          locations = gt::cells_column_labels(columns = c(Weight, Value))
+     ) |>
+     gt::tab_style(
+          style = gt::cell_text(align = "center"),
+          locations = gt::cells_body(columns = c(Weight, Value))
+     ) |>
+     gt::tab_options(
+          table.border.top.color = "#C00686",
+          table.width = "100%",
+          table.font.size = 10) |>
+     # gt::opt_table_outline(color = "#7673DC", width = px(3)) |>
+     gt::tab_options(
+          table.width = "100%",
+          table.align = "left"
+     )
+
+
+```
+
+
+Holdings 
+================================================================================
+
+```{r, echo=FALSE}
+params$holdings |>
+     gt::tab_options(table.font.size = 10) 
+```
+
+
+<!-- Portfolio Statistics -->
+<!-- ================================================================================ -->
+
+
+<!-- Expected Return {.block} -->
+<!-- ================================================================================ -->
+<!-- `r params$return` -->
+
+
+<!-- Expected Risk {.block} -->
+<!-- ================================================================================ -->
+<!-- `r params$risk` -->
+
+
+<!-- Weighted Yield {.block} -->
+<!-- ================================================================================ -->
+<!-- `r params$yield` -->
+
+
+<!-- Weighted Expenses {.block} -->
+<!-- ================================================================================ -->
+<!-- `r params$expense` -->
+
+
+

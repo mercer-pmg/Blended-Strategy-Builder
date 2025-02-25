@@ -1,0 +1,127 @@
+@page {
+  size: 11in 8.5in;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  width: 10in;
+  height: 7.5in;
+}
+body {
+  margin: 0;
+  font-size: 12px;
+  width: 100%;
+  height: 99.9%;
+  grid-gap: .1in;
+  padding: .1in;
+  font-family: 'IBM Plex Sans', Calibri, sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    'S1 S1 S1 S1'
+    'S2 S2 S2 S2'
+    'S3 S3 S3 S3';
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.section-1 { grid-area: S1; }
+.section-2 { grid-area: S2; }
+ .section-3 { grid-area: S3; }
+/* .section-4 { grid-area: S4; }
+.section-5 { grid-area: S5; } 
+.section-6 { grid-area: S6; } 
+.section-7 { grid-area: S7; }
+.section-8 { grid-area: S8; }
+.section-9 { grid-area: S9; }
+.section-10 { grid-area: S10; }
+.section-11 { grid-area: S11; }
+.section-12 { grid-area: S12; }*/
+
+h1, .poster-title, .figure {
+  text-align: left;
+}
+
+.poster-title h1 {
+  font-family: "Merriweather", Verdana, sans-serif;
+  font-size: 3em;
+  color: #820361;
+  padding: 0.05em;
+  margin-bottom: 0;
+}
+
+.poster-title {
+  /* border-bottom: .1in solid #454759; */
+  margin: 0;
+}
+
+h1 {
+  color: #454759;
+  margin: 0;
+  padding: .05em;
+  font-size: 2em;
+}
+
+.block {
+  border: .1in solid steelblue;
+  background-color: aliceblue;
+}
+
+.block h1 {
+  background-color: steelblue;
+  color: white;
+}
+
+.block > .content {
+  padding: 1em;
+  line-height: 1.5em;
+}
+
+table {
+  margin: auto;
+  border-top: 3px solid #666;
+  border-bottom: 3px solid #666;
+  width: 100%;
+}
+table thead th { border-bottom: 3px solid #ddd; }
+td { padding: 8px; }
+th { padding: 15px; }
+caption { margin-bottom: 10px; }
+
+a { text-decoration: none; }
+
+h1 hr {
+  border: .05in solid gray;
+  /* clip-path: ellipse(50% 3px at center); */
+  margin: 0;
+}
+
+.figure-example {
+  text-align: center;
+}
+
+.figure-example p:first-child {
+  background-color: floralwhite;
+  border: 5px dotted gray;
+  width: 90%;
+  height: 12em;
+  padding: 1em 0;
+  margin: 0 auto;
+}
+
+.logo-example {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.logo-example > p {
+  width: 30%;
+  border: 5px dotted sandybrown;
+  background-color: whitesmoke;
+  height: 5em;
+  text-align: center;
+}

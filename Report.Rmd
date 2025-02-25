@@ -1,0 +1,29 @@
+---
+title: "Strategy Report"
+output:
+  html_document: default
+params:
+  allocation: NA
+  plot: NA
+
+---
+
+
+```{r, echo = FALSE}
+params$allocation |>
+     gt::gt() |>
+     gt::tab_header(title = gt::md("**Sleeve Allocations**")) |>
+     gt::opt_align_table_header(align = "left") |>
+     gt::opt_table_font("IBM Plex Sans") |>
+     gt::opt_row_striping() 
+
+params$plot
+
+
+```
+
+
+```{r, out.width="100%", echo=FALSE}
+# knitr::include_graphics(params$gdp_image)
+```
+
