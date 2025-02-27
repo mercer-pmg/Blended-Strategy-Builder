@@ -1,0 +1,148 @@
+model_agg_id,model_agg,asset_class,weight
+69113,MA 5 Year Municipal Ladder (ETF),U.S. Muni 1-15 Yr Blend,100
+69172,MA 5 Year Treasury Ladder (ETF),U.S. Long Treasuries,100
+69112,MA 5 Year US Corporate Ladder (ETF),U.S. Inv Grade Corporate Bonds,100
+69114,MA 5 Year US HY Corporate Ladder (ETF),U.S. High Yield Bonds,100
+69173,MA 9 Year Treasury Ladder (ETF),U.S. Long Treasuries,100
+69174,MA 9 Year US Corporate Ladder (ETF),U.S. Long Corporate Bonds,100
+69229,MA 1 Year CD Ladder (SMA),U.S. Short Duration Government/Credit,100
+69230,MA 1 Year Treasury Ladder (SMA),U.S. Short Duration Government/Credit,100
+69231,MA 5 Year CD Ladder (SMA),U.S. Short Duration Government/Credit,100
+69232,MA 5 Year Treasury Ladder (SMA),U.S. Long Treasuries,100
+69153,MA Multifactor Emerging Markets (ETF),Emerging Markets Core,50
+69153,MA Multifactor Emerging Markets (ETF),Emerging Markets Multifactor,50
+69150,MA Multifactor US Small Cap (ETF),U.S. Small Cap,50
+69150,MA Multifactor US Small Cap (ETF),U.S. Small Cap Multifactor,50
+69148,MA Multifactor US Large Cap (ETF),U.S. Large Cap,50
+69148,MA Multifactor US Large Cap (ETF),U.S. Equity Value Factor,16.7
+69148,MA Multifactor US Large Cap (ETF),U.S. Equity Momentum Factor,16.7
+69148,MA Multifactor US Large Cap (ETF),U.S. Equity Quality Factor,16.6
+69152,MA Multifactor Int'l Developed Markets (ETF),Non-US Developed Core,50
+69152,MA Multifactor Int'l Developed Markets (ETF),Non-US Developed Value,16.7
+69152,MA Multifactor Int'l Developed Markets (ETF),Non-US Developed Momentum,16.7
+69152,MA Multifactor Int'l Developed Markets (ETF),Non-US Developed Quality,16.6
+69124,"MA Fixed Income (ETF, Global Short-Term)",U.S. Short Duration Government/Credit,45
+69124,"MA Fixed Income (ETF, Global Short-Term)",U.S. Aggregate Bonds,37
+69124,"MA Fixed Income (ETF, Global Short-Term)",World Government Bonds hedged,18
+69137,MA Market US Small Cap (ETF),U.S. Small Cap,100
+69138,MA Market Int'l Developed Markets (ETF),Non-US Developed Core,100
+69136,MA Market US Mid Cap (ETF),U.S. Mid Cap,100
+69145,MA Market US Large Cap (ETF),U.S. Large Cap,100
+69139,MA Market Emerging Markets (ETF),Emerging Markets Core,100
+69127,"MA Fixed Income (ETF, Global)",U.S. Aggregate Bonds,70
+69127,"MA Fixed Income (ETF, Global)",World ex-U.S. Government Bonds hedged,30
+69168,"MA Multifactor Emerging Markets (ETF, Ex Core)",Emerging Markets Multifactor,100
+69151,"MA Multifactor US Small Cap (ETF, Ex Core)",U.S. Small Cap Multifactor,100
+69167,"MA Multifactor Int'l Developed Markets (ETF, Ex Core)",Non-US Developed Value,33.4
+69167,"MA Multifactor Int'l Developed Markets (ETF, Ex Core)",Non-US Developed Momentum,33.3
+69167,"MA Multifactor Int'l Developed Markets (ETF, Ex Core)",Non-US Developed Quality,33.3
+69149,"MA Multifactor US Large Cap (ETF, Ex Core)",U.S. Equity Value Factor,33.4
+69149,"MA Multifactor US Large Cap (ETF, Ex Core)",U.S. Equity Momentum Factor,33.3
+69149,"MA Multifactor US Large Cap (ETF, Ex Core)",U.S. Equity Quality Factor,33.3
+69125,MA Fixed Income TM (ETF),U.S. Muni 1-15 Yr Blend,100
+69154,"MA Fixed Income (ETF, Global Low Min)",Global Aggregate Bonds hedged,100
+69142,"MA Market Global Equity (ETF, Low Min)",U.S. Large Cap,68
+69142,"MA Market Global Equity (ETF, Low Min)",Non-US Developed Core,32
+69226,CUSTOM - MA Multifactor US Large Cap (SMA),U.S. Large Cap Multifactor,100
+69266,"MA Market Int'l Developed Markets (ETF, ESG)",Non-US Developed Core,100
+69267,"MA Market Emerging Markets (ETF, ESG)",Emerging Markets Core,100
+69264,"MA Market US Large Cap (ETF, ESG)",U.S. Large Cap,87.5
+69264,"MA Market US Large Cap (ETF, ESG)",U.S. Equity Value Factor,12.5
+69265,"MA Market US Small Cap (ETF, ESG)",U.S. Small Cap,100
+69155,"MA Fixed Income (ETF, Global ESG)",Global Aggregate Bonds hedged,100
+69165,MA Income Emerging Markets (ETF),Emerging Markets Core,50
+69165,MA Income Emerging Markets (ETF),Emerging Markets High Div,50
+69163,MA Income US Small Cap (ETF),U.S. Small Cap,50
+69163,MA Income US Small Cap (ETF),U.S. Small Cap High Div,50
+69162,MA Income US Mid Cap (ETF),U.S. Mid Cap,50
+69162,MA Income US Mid Cap (ETF),U.S. Mid Cap Dividend Yield Factor,50
+69164,MA Income Int'l Developed Markets (ETF),Non-US Developed Core,50
+69164,MA Income Int'l Developed Markets (ETF),Non-US Developed High Div,50
+69161,MA Income US Large Cap (ETF),U.S. Large Cap,50
+69161,MA Income US Large Cap (ETF),U.S. Equity Dividend Yield Factor,50
+69158,"MA Fixed Income (ETF, US High Yield)",U.S. High Yield Bonds,100
+69159,"MA Fixed Income TM (ETF, High Yield)",U.S. Muni High Yield,100
+69157,"MA Fixed Income TM (ETF, CA-Muni)",U.S. Muni High Yield,100
+69270,MA Options Strategy,U.S. Large Cap,100
+69242,Quantitative Portfolio: Factor-Enhanced Large Cap: V + M + Q,U.S. Large Cap Multifactor,100
+69327,"MA Fixed Income (ETF, US Short Term)",U.S. Short Duration Government/Credit,100
+69144,"MA Market Global Equity (ETF, Shariah Compliant)",U.S. Large Cap,68
+69144,"MA Market Global Equity (ETF, Shariah Compliant)",Emerging Markets Core,32
+69156,"MA Fixed Income (ETF, Global Shariah Compliant)",Global Aggregate Bonds hedged,100
+69255,Quantitative Portfolio: Market Series Large Cap Dividend Income,U.S. Equity Dividend Yield Factor,100
+69171,"MA Fixed Income (ETF, TIPS)",TIPS,100
+69279,"MA Multifactor Emerging Markets (ETF, Ex China)",Emerging Markets Multifactor,100
+69235,Quantitative Portfolio: Factor-Enhanced Emerg Mrkts ADR: V + M + Q,Emerging Markets Multifactor,100
+69237,Quantitative Portfolio: Factor-Enhanced Global V + M + Q,AC World Equity Multifactor,100
+69239,Quantitative Portfolio: Factor-Enhanced Intl ADR: V + M + Q,Non-US Developed Multifactor,100
+69233,Quantitative Portfolio: Factor-Enhanced All Cap: V + M + Q,U.S. All Cap Multifactor,100
+69244,Quantitative Portfolio: Factor-Enhanced Small Cap: V + M + Q,U.S. Small Cap Multifactor,100
+69246,Quantitative Portfolio: Global Climate Solutions,AC World Equity,100
+69247,Quantitative Portfolio: Large Cap Core Catholic Values,U.S. Large Cap,100
+69248,Quantitative Portfolio: Large Cap Core Gender and Diversity,U.S. Large Cap,100
+69250,Quantitative Portfolio: Market Series Emerg Mrkts ADR,Emerging Markets Core,100
+69251,Quantitative Portfolio: Market Series Global,AC World Equity,100
+69252,Quantitative Portfolio: Market Series Intl ADR,Non-US Developed Core,100
+69249,Quantitative Portfolio: Market Series All Cap Core,U.S. All Cap,100
+69253,Quantitative Portfolio: Market Series Large Cap Core,U.S. Large Cap,100
+69254,Quantitative Portfolio: Market Series Large Cap Core - Low Minimum,U.S. Large Cap,100
+69256,Quantitative Portfolio: Market Series Large Cap Dividend Income - Low Min.,U.S. Equity Dividend Yield Factor,100
+69259,Quantitative Portfolio: Market Series Small Cap Core,U.S. Small Cap,100
+69260,Quantitative Portfolio: Sustainable Emerging Markets ADR Portfolio,Emerging Markets Core,100
+69261,Quantitative Portfolio: Sustainable International ADR Portfolio,Non-US Developed Core,100
+69262,Quantitative Portfolio: Sustainable Large Cap Core Portfolio,U.S. Large Cap,100
+69263,Quantitative Portfolio: Sustainable Small Cap Core Portfolio,U.S. Small Cap,100
+69281,MA Cash Mgmt (Fidelity CA High Min),U.S. Cash,100
+69282,MA Cash Mgmt (Fidelity CA),U.S. Cash,100
+69283,MA Cash Mgmt (Fidelity High Min),U.S. Cash,100
+69284,MA Cash Mgmt (Fidelity NY High Min),U.S. Cash,100
+69285,MA Cash Mgmt (Fidelity NY),U.S. Cash,100
+69286,MA Cash Mgmt (Fidelity),U.S. Cash,100
+69287,MA Cash Mgmt (RayJay CA),U.S. Cash,100
+69288,MA Cash Mgmt (RayJay NY),U.S. Cash,100
+69289,MA Cash Mgmt (RayJay),U.S. Cash,100
+69290,MA Cash Mgmt (Schwab CA High Min),U.S. Cash,100
+69291,MA Cash Mgmt (Schwab CA),U.S. Cash,100
+69292,MA Cash Mgmt (Schwab High Min),U.S. Cash,100
+69293,MA Cash Mgmt (Schwab NY High Min),U.S. Cash,100
+69294,MA Cash Mgmt (Schwab NY),U.S. Cash,100
+69295,MA Cash Mgmt (Schwab),U.S. Cash,100
+69296,MA Cash Mgmt TM (Fidelity High Min),U.S. Cash,100
+69297,MA Cash Mgmt TM (Fidelity),U.S. Cash,100
+69298,MA Cash Mgmt TM (RayJay),U.S. Cash,100
+69299,MA Cash Mgmt TM (Schwab High Min),U.S. Cash,100
+69300,MA Cash Mgmt TM (Schwab),U.S. Cash,100
+69328,"MA Fixed Income TM (ETF, US Only)",U.S. Long Duration Government/Credit,100
+69234,Quantitative Portfolio: Factor-Enhanced All Cap: V + Q,U.S. All Cap Multifactor,100
+69236,Quantitative Portfolio: Factor-Enhanced Emerg Mrkts ADR: V + Q,Emerging Markets Multifactor,100
+69238,Quantitative Portfolio: Factor-Enhanced Global V+Q,AC World Equity Multifactor,100
+69240,Quantitative Portfolio: Factor-Enhanced Intl ADR: V + Q,Non-US Developed Multifactor,100
+69241,Quantitative Portfolio: Factor-Enhanced Large Cap Low Volatility,U.S. Equity Minimum Volatility Factor,100
+69243,Quantitative Portfolio: Factor-Enhanced Large Cap: V + Q,U.S. Large Cap Multifactor,100
+69245,Quantitative Portfolio: Factor-Enhanced Small Cap: V + Q,U.S. Small Cap Multifactor,100
+69355,MA Private Credit Interval Funds,Direct Lending,100
+69354,MA Private Real Estate Interval Funds,U.S. Value-Added Real Estate,100
+69307,MA Market Emerging Markets (ERISA) Portfolio,Emerging Markets Core,100
+69306,MA Market Int'l Developed Markets (ERISA) Portfolio,Non-US Developed Core,100
+69304,MA Market US Mid Cap (ERISA) Portfolio,U.S. Mid Cap,100
+69305,MA Market US Small Cap (ERISA) Portfolio,U.S. Small Cap,100
+69303,MA Market US Large Cap (ERISA) Portfolio,U.S. Large Cap,100
+69302,"MA Fixed Income (ERISA, Global)",Global Aggregate Bonds hedged,100
+69309,BlackRock Corporate 1-10 Year,U.S. Inv Grade Corporate Bonds,100
+69308,BlackRock Corporate 1-5 Year,U.S. Inv Grade Corporate Bonds,100
+69313,BlackRock Municipal 10-20 Year,U.S. Muni 1-15 Yr Blend,100
+69311,BlackRock Municipal 1-10 Year,U.S. Muni 1-15 Yr Blend,100
+69310,BlackRock Municipal 1-5 Year,U.S. Muni 1-15 Yr Blend,100
+69312,BlackRock Municipal 5-15 Year,U.S. Muni 1-15 Yr Blend,100
+69315,Nuveen Corporate 1-15 Year,U.S. Inv Grade Corporate Bonds,100
+69314,Nuveen Government 1-15 Year,U.S. Long Treasuries,100
+69317,Nuveen Municipal 1-10 Year,U.S. Muni 1-15 Yr Blend,100
+69318,Nuveen Municipal 1-15 Year,U.S. Muni 1-15 Yr Blend,100
+69316,Nuveen Municipal 1-7 Year,U.S. Muni 1-15 Yr Blend,100
+69319,Nuveen Municipal 5-15 Year,U.S. Muni 1-15 Yr Blend,100
+69320,Nuveen Preferred Securities,U.S. Preferred,100
+69176,"MA Fixed Income (ETF, Non-US)",World ex-U.S. Government Bonds hedged,100
+69336,PIMCO Corporate 1-5 Year,U.S. Inv Grade Corporate Bonds,100
+69337,PIMCO Corporate 3-8 Year,U.S. Inv Grade Corporate Bonds,100
+69338,PIMCO Corporate 1-11 Year,U.S. Inv Grade Corporate Bonds,100
+69339,PIMCO Corporate 3-11 Year,U.S. Inv Grade Corporate Bonds,100

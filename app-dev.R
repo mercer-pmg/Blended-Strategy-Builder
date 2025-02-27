@@ -10,6 +10,7 @@ library(gtExtras)
 library(webshot2)
 library(ggplot2)
 library(pagedown)
+library(aws.s3)
 
 source("./R/selectInput_sleeve.R")
 source("./R/numericInputIcon_weight.R")
@@ -32,7 +33,17 @@ source("./R/blended_strategy_count.R")
 source("./R/update_blended_strategy_record.R")
 
 
-platform   <- readr::read_csv(file = "Orion Platform.csv", show_col_types = FALSE) 
+# platform   <- readr::read_csv(file = "Orion Platform.csv", show_col_types = FALSE) 
+
+platform <- aws.s3::get_object(
+     region = Sys.getenv("AWS_DEFAULT_REGION"),
+     key    = Sys.getenv("AWS_ACCESS_KEY_ID"),
+     secret = Sys.getenv("AWS_SECRET_ACCESS_KEY"),
+     
+     object = "orion-platform.csv", 
+     bucket = "aspen-investing-menu") |>
+     readBin("character") |>
+     readr::read_csv(show_col_types = FALSE)
 
 sleeve_ids <- platform |> 
      dplyr::select(model_agg, model_agg_id) |> 
